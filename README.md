@@ -25,7 +25,7 @@ const getUser: Endpoint<["api", "users", Capture<"id">, Handler<GET, [Response<2
 and have this generate the following code for Express:
 
 ```typescript
-app.get('/users/:id', (req, res) => {
+app.get('/api/users/:id', (req, res) => {
   const [code, res] = getUser(req.params.id);
   res.status(code).json(res);
 });
